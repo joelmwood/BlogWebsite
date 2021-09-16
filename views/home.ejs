@@ -1,6 +1,12 @@
 <%- include("partials/header"); -%>
 
 <h1>Home</h1>
-<p> <%= blogPost %> </p>
+<p> <%= startingBlogPost %> </p>
+
+<% if ( newPosts.length !== 0 ) { %>
+<%    for ( var i = 0; i < newPosts.length; i++){ %>
+      <p> <%= newPosts[i] %> </p>
+<%    } %>
+<% } %>
 
 <%- include("partials/footer"); -%>
