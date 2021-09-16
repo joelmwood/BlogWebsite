@@ -37,3 +37,8 @@
 textarea {
   resize: none;
 }
+
+hr{
+  height: 1px;
+  background-color: #d5d2d2;
+}

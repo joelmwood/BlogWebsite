@@ -43,7 +43,7 @@ app.get("/compose",function(req, res){
 
 app.post("/compose", function(req, res){
   let newPost = req.body.newBlogPost;
-  blogPosts.push(newPost);
+  blogPosts.unshift(newPost);
   res.redirect("/");
 });
 
