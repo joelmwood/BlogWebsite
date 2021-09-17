@@ -2,12 +2,20 @@
 
 <h1>Home</h1>
 
-<% if ( newPosts.length !== 0 ) { %>
+<!-- <% if ( newPosts.length !== 0 ) { %>
 <%    for ( var i = newPosts.length - 1; i >= 0; i--){ %>
       <h4> <%= newPosts[i].title %> </h4>
       <p><%= newPosts[i].content %> </p>
       <hr>
 <%    } %>
+<% } %> -->
+
+<% if ( newPosts.length !== 0 ){ %>
+<%       newPosts.slice().reverse().forEach(function (newPost){ %>
+            <h4> <%= newPost.title %> </h4>
+            <p> <%= newPost.content %> </p>
+            <hr>
+<%      }); %>
 <% } %>
 
 <p> <%= startingBlogPost %> </p>
