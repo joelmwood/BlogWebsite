@@ -45,10 +45,10 @@ app.get("/compose",function(req, res){
 
 app.post("/compose", function(req, res){
   let newPostTitle = req.body.newBlogPostTitle;
-  blogPostTitles.unshift(newPostTitle);
+  blogPostTitles.push(newPostTitle);
 
   let newPostContent = req.body.newBlogPostContent;
-  blogPostContents.unshift(newPostContent);
+  blogPostContents.push(newPostContent);
 
   res.redirect("/");
 });
