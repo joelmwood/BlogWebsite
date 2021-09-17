@@ -12,8 +12,8 @@
 
 <% if ( newPosts.length !== 0 ){ %>
 <%       newPosts.slice().reverse().forEach(function (newPost){ %>
-            <h3> <%= newPost.title %> </h3>
-            <p> <%= newPost.content %> </p>
+            <h1> <%= newPost.title %> </h1>
+            <p> <%= newPost.content.substring(0, 100) + "..." %> <a href="posts/<%=newPost.title %>">Read More</a> </p>
             <hr>
 <%      }); %>
 <% } %>
